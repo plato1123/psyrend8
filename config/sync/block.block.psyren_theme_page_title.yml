@@ -1,0 +1,20 @@
+uuid: c77db51e-ae6f-4e8a-a285-b6383ca40f88
+langcode: en
+status: true
+dependencies:
+  theme:
+    - psyren_theme
+_core:
+  default_config_hash: IVvT5MengHpY7A0JyrMYs0zX5cMhC5bcKB92ViVxClQ
+id: psyren_theme_page_title
+theme: psyren_theme
+region: page_title
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

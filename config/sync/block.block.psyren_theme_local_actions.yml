@@ -1,0 +1,20 @@
+uuid: 9697f265-50db-4ead-984e-b5f5e816f8e8
+langcode: en
+status: true
+dependencies:
+  theme:
+    - psyren_theme
+_core:
+  default_config_hash: KP-iexBbKctZjv_PAxDJQxePbvaapjVOxny3P6bijiI
+id: psyren_theme_local_actions
+theme: psyren_theme
+region: auto_hidden_block
+weight: 20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

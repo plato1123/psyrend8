@@ -1,0 +1,22 @@
+uuid: f6f9a31c-e177-4a93-ac0e-7c49c1ab272e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - psyren_theme
+_core:
+  default_config_hash: tPPDd6uxtmtUDZLYuudA_PcbVFjbwXRQR6AJjuhDheI
+id: psyren_theme_content
+theme: psyren_theme
+region: content
+weight: 1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

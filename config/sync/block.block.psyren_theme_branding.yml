@@ -1,0 +1,25 @@
+uuid: ad934a7b-d7ac-4a81-9ba8-481c395d09e8
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - psyren_theme
+_core:
+  default_config_hash: RxnaJEfUOB5T5VU1Q971a9qTH9IFAUeNawv8mjOrJ-8
+id: psyren_theme_branding
+theme: psyren_theme
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }
