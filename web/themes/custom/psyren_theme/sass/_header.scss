@@ -1,0 +1,163 @@
+/*Header*/
+
+.top-nav{
+	background: #f7f7fa;
+    padding: 15px;
+    font-size: 1.1em;
+    position: relative;
+    @include box-shadow(1px 1px 4px #dedede);
+
+	.region-message,
+	.region-email{
+		display: inline-block;
+	}
+
+	.fa{
+		padding: 0 5px;
+	}
+
+	.block, p{
+		margin: 0;
+	}
+
+}
+
+.header{
+    padding: 7px 0;
+    text-align: left;
+}
+
+.main-header {
+
+  	nav{	  
+		border: 0;
+		margin: 0;
+		position: relative;
+		min-height: auto;
+		background: none;
+		@include border-radius(0);
+	}
+
+	.region{
+		position: relative;
+		padding: 25px 0;
+	}
+
+	.block{
+		margin: 0;
+	}
+
+	p, .block{
+		margin: 0;
+	}
+}
+
+/*Region Header*/
+
+.site-branding{
+	margin: 0;
+}
+
+.region-header{
+	padding: 12px 0;
+}
+
+.region-header .brand{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 1.5em;
+
+	a{
+		display: block;
+		text-transform: uppercase;
+		font-weight: 400;
+
+		img{
+			vertical-align: middle;
+		}
+	}
+
+	.site-branding__slogan{
+		font-size: .5em;
+		text-transform: uppercase;
+		vertical-align: top;
+	}
+}
+
+/*Search Form*/
+
+.search-block-form{
+	margin: 0 auto;
+}
+
+.region-search{
+	width: 100%;
+	display: inline-block;
+	padding: 7px 0;
+	vertical-align: middle;
+}
+
+#search-block-form{
+	display: table;
+	width: 100%;
+
+	.form-item, 
+	.form-actions{
+		display: table-cell;
+		vertical-align: top;
+	}
+
+	.form-actions{
+		width: 30px;
+	}
+
+	input.form-submit{
+		background: image-url("search.png") no-repeat center $linkColor;
+		font-size: 0;
+		width: 100%;
+		height: 30px;
+		padding: 0 20px;
+		vertical-align: top;
+		@include border-radius(0 20px 20px 0);
+
+		&:hover{
+			background-color: $linkColorHover;
+			border-color: $linkColorHover;
+		}
+	}
+
+	input{
+		width: 100%;
+		height: 30px;
+		@include border-radius(20px 0 0 20px);
+	}
+}
+
+/*Breadcrumb*/
+
+.breadcrumb{
+	font-size: .85em;
+	padding: 2px 0;
+	margin: 0;
+	display: inline-block;
+
+	ul,ol{
+		padding: 0;
+		margin: 0;
+
+			li{
+				display: inline-block;
+				padding: 0 8px;
+
+				&:after{
+					content: " >";
+					padding-left: 15px;
+				}
+
+				&:last-child:after{
+					display: none;
+				
+			}
+		}
+	}
+}

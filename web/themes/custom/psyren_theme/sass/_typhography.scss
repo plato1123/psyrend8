@@ -1,0 +1,92 @@
+
+p { margin: 0 0 20px 0; }
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4{
+  font-family: $titleFontFamily;
+  color: $linkColor; 
+  font-weight: 400; 
+  margin: 10px 0;
+  line-height: 120%;
+}
+
+h1, .h1{ font-size: 2em; }
+
+h2, .h2{ font-size: 1.5em; margin-bottom: 20px; }
+
+h3, .h3{ font-size: 1.2em; }
+
+h4, .h4{ font-size: 1.1em; }
+
+img { max-width: 100%; }
+
+em{ font-style: italic; }
+
+strong, b { font-weight: bold; }
+
+h2.title{ color: $linkColor; }
+
+.custom-block-title{
+  text-align: center;
+  margin: 20px 0;
+  overflow: hidden;
+
+  h2{
+    font-size: 1.5em;
+    color: #000;
+    margin-bottom: 5px;
+  }
+}
+
+.pricing-card-title{
+  color: #008000;
+}
+
+a {
+	color: $linkColor;
+  
+	&:hover{
+  		color: $linkColorHover;
+  		text-decoration: none;
+	}
+}
+
+ol, ul {
+	padding-left: 20px;
+  margin-bottom: 20px;
+
+  li{
+    list-style: outside;
+  }
+}
+
+.list-unstyled{
+  li{
+    list-style: none;
+  }
+}
+
+ol li{
+  list-style-type: decimal;
+}
+
+ul.links.inline{
+	padding: 0;
+
+	li{
+ 		list-style: none;
+ 	}
+}
+
+.form-email,
+.form-text,
+.form-textarea{
+  border: 1px solid $borderColor;
+  background: transparent;
+}
+
+.block{
+  margin-bottom: 10px;
+}

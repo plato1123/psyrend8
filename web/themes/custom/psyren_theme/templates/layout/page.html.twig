@@ -1,0 +1,594 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a single page.
+ *
+ * The doctype, html, head and body tags are not in this template. Instead they
+ * can be found in the html.html.twig template in this directory.
+ *
+ * Available variables:
+ *
+ * General utility variables:
+ * - base_path: The base URL path of the Drupal installation. Will usually be
+ *   "/" unless you have installed Drupal in a sub-directory.
+ * - is_front: A flag indicating if the current page is the front page.
+ * - logged_in: A flag indicating if the user is registered and signed in.
+ * - is_admin: A flag indicating if the user has permission to access
+ *   administration pages.
+ *
+ * Site identity:
+ * - front_page: The URL of the front page. Use this instead of base_path when
+ *   linking to the front page. This includes the language domain or prefix.
+ * - logo: The url of the logo image, as defined in theme settings.
+ * - site_name: The name of the site. This is empty when displaying the site
+ *   name has been disabled in the theme settings.
+ * - site_slogan: The slogan of the site. This is empty when displaying the site
+ *   slogan has been disabled in theme settings.
+ *
+ * Page content (in order of occurrence in the default page.html.twig):
+ * - messages: Status and error messages. Should be displayed prominently.
+ * - node: Fully loaded node, if there is an automatically-loaded node
+ *   associated with the page and the node ID is the second argument in the
+ *   page's path (e.g. node/12345 and node/12345/revisions, but not
+ *   comment/reply/12345).
+ *
+ * Regions:
+ * - page.header: Items for the header region.
+ * - page.navigation: Items for the Navigation region.
+ * - page.page_title: Used by Current page Title.
+ * - page.banner: Items for the banner region.
+ * - page.highlighted: Items for the highlighted top  region.
+ * - page.content_top: The main content top of the current page.
+ * - page.help: Item for the help region.
+ * - page.breadcrumb: Item for the Breadcrumb region.
+ * - page.content: The main content of the current page.
+ * - page.sidebar_first: Items for the first sidebar.
+ * - page.sidebar_second: Items for the second sidebar.
+ * - page.content_bottom: Items for the bottom in content region.
+ * - page.footer_top: Items for the footer top region.
+ * - page.footer_first: Items for the footer first region.
+ * - page.footer_second: Items for the footer Second region.
+ * - page.footer_third: Items for the footer third region.
+ * - page.footer_bottom: Items for the footer bottom region.
+ *
+ * @see template_preprocess_page()
+ * @see html.html.twig
+ *
+ * @ingroup themeable
+ */
+#}
+
+<!-- <div class="top-nav">
+  <div class="container">
+    <div class="row">
+      
+      {% if show_social_icon %}
+        <div class="col-md-6">
+          <p class="social-media">
+            Follow us 
+            {% if facebook_url %}
+              <a href="{{ facebook_url }}"  class="facebook" target="_blank" ><i class="fab fa-facebook-f"></i></a>
+            {% endif %}
+            {% if google_plus_url %}
+              <a href="{{ google_plus_url }}"  class="google-plus" target="_blank" ><i class="fab fa-google-plus-g"></i></a>
+            {% endif %}
+            {% if twitter_url %}
+              <a href="{{ twitter_url }}" class="twitter" target="_blank" ><i class="fab fa-twitter"></i></a>
+            {% endif %}
+            {% if linkedin_url %}
+              <a href="{{ linkedin_url }}" class="linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            {% endif %}
+            {% if pinterest_url %}
+              <a href="{{ pinterest_url }}" class="pinterest" target="_blank" ><i class="fab fa-pinterest-p"></i></a>
+            {% endif %}
+            {% if rss_url %}
+              <a href="{{ rss_url }}" class="rss" target="_blank" ><i class="fa fa-rss"></i></a>
+            {% endif %}
+          </p>
+        </div>
+      {% endif %}
+     
+    </div>
+  </div>
+</div> -->
+
+<div class="header-wrap">
+
+  <div class="header">
+    <div class="container">
+      <div class="row">
+
+        <!-- Start: Header -->
+
+        <div class="navbar-header col-md-3">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+          {% if page.header %}
+            {{ page.header }}
+          {% endif %}
+        </div>
+
+        <!-- End: Header -->
+
+        {% if page.primary_menu  or page.search%}
+          <div class="col-md-9">
+
+            {% if page.search %}
+              {{ page.search }}
+            {% endif %}
+
+            {% if page.primary_menu %}
+              {{ page.primary_menu }}
+            {% endif %}
+            
+          </div>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+
+  {% if is_front and show_slideshow%}
+    
+      <div class="flexslider">
+        <ul class="slides">
+          {% for slider_contents in slider_content %}
+            {{ slider_contents | raw }}
+          {% endfor %}
+        </ul>
+      </div>
+    
+  {% endif %}
+
+</div>
+
+
+<!-- Start: Top widget -->
+
+{% if page.topwidget_first or page.topwidget_second or page.topwidget_third %}
+  <div class="topwidget" id="topwidget">
+
+    <div class="container">
+
+      {% if page.topwidget_title %}
+        <div class="custom-block-title" >
+          {{ page.topwidget_title }}
+        </div>
+      {% endif %}
+
+        <div class="row topwidget-list clearfix">
+
+          <!-- Start: Top widget first -->          
+          {% if page.topwidget_first %}
+            <div class = {{ topwidget_class }}>{{ page.topwidget_first }}</div>
+          {% endif %}          
+          <!-- End: Top widget first --> 
+
+          <!-- Start: Top widget second -->          
+          {% if page.topwidget_second %}
+            <div class = {{ topwidget_class }}>{{ page.topwidget_second }}</div>
+          {% endif %}          
+          <!-- End: Top widget second --> 
+          
+          <!-- Start: Top widget third -->         
+          {% if page.topwidget_third %}
+            <div class = {{ topwidget_class }}>{{ page.topwidget_third }}</div>
+          {% endif %}          
+          <!-- End: Top widget third -->
+
+        </div>
+    </div>
+  </div>
+{% endif %}
+
+<!--End: Top widget -->
+
+    
+<!--Start: Highlighted -->
+
+{% if page.highlighted %}
+  <div class="highlighted">
+    <div class="container">
+      {{ page.highlighted }}
+    </div>
+  </div>
+{% endif %}
+
+<!--End: Highlighted -->
+
+
+<!--Start: Top Message -->
+
+{% if page.topmessage %}
+  <div class="top-message">
+    <div class="container">
+      {{ page.topmessage }}
+    </div>
+  </div>
+{% endif %}
+
+<!--End: Top Message -->
+
+
+<!--Start: Title -->
+{%  if page.page_title and not is_front %}
+  <div id="page-title">
+    <div id="page-title-inner">
+      <div class="container">
+        {{ page.page_title }}
+      </div>
+    </div>
+  </div>
+{% endif %}
+<!--End: Title -->
+
+<div class="main-content">
+  <div class="container">
+    <div class="">
+
+      <!--Start: Breadcrumb -->
+
+      {% if not is_front %}
+        <div class="row">
+          <div class="col-md-12">{{ page.breadcrumb }}</div>
+        </div>
+      {% endif %}
+
+      <!--End: Breadcrumb -->
+
+      <div class="row layout">
+
+        <!--- Start: Left SideBar -->
+        {% if page.sidebar_first %}
+          <div class={{sidebarfirst}}>
+            <div class="sidebar">
+              {{ page.sidebar_first }}
+            </div>
+          </div>
+        {% endif %}
+        <!-- End Left SideBar -->
+
+        <!--- Start Content -->
+        {% if page.content %}
+          <div class={{contentlayout}}>
+            <div class="content_layout">
+              {{ page.content }}
+            </div>              
+          </div>
+        {% endif %}
+        <!-- End: Content -->
+
+        <!-- Start: Right SideBar -->
+        {% if page.sidebar_second %}
+          <div class={{sidebarsecond}}>
+            <div class="sidebar">
+              {{ page.sidebar_second }}
+            </div>
+          </div>
+        {% endif %}
+        <!-- End: Right SideBar -->
+        
+      </div>
+    
+    </div>
+  </div>
+</div>
+
+<!-- End: Main content -->
+
+
+<!-- Start: Clients -->
+{% if page.clients %} 
+
+  <div class="clients" id="clients">
+
+    {% if page.clients_title %}
+      <h2 class="custom-block-title" >
+        {{ page.clients_title }}
+      </h2>
+    {% endif %}
+
+    <div class="container">
+      {{ page.clients }}
+    </div>
+  </div>
+
+{% endif %}
+<!--End: Clients -->
+
+
+<!-- Start: Features -->
+{% if page.features_first or page.features_second or page.features_third %}
+
+  <div class="features">
+    <div class="container">
+
+      {% if page.features_title %}
+        <h2 class="custom-block-title" >
+          {{ page.features_title }}
+        </h2>
+      {% endif %}
+
+      <div class="row">
+
+        <!-- Start: Features First -->
+        {% if page.features_first %}
+          <div class = {{ features_first_class }}>
+            {{ page.features_first }}
+          </div>
+        {% endif %}
+        <!-- End: Features First -->
+
+        <!-- Start :Features Second -->
+        {% if page.features_second %}
+          <div class = {{ features_class }}>
+            {{ page.features_second }}
+          </div>
+        {% endif %}
+        <!-- End: Features Second -->
+
+        <!-- Start: Features third -->
+        {% if page.features_third %}
+          <div class = {{ features_class }}>
+            {{ page.features_third }}
+          </div>
+        {% endif %}
+        <!-- End: Features Third -->
+
+      </div>
+    </div>
+  </div>
+
+{% endif %}
+<!--End: Features -->
+
+
+<!-- Start: Services widgets -->
+{% if page.services_first or page.services_second or page.services_third %}
+
+  <div class="services" id="services">    
+    <div class="container">
+
+      {% if page.services_title %}
+        <h2 class="custom-block-title" >
+          {{ page.services_title }}
+        </h2>
+      {% endif %}
+
+      <div class="row services-list">
+
+        <!-- Start: Bottom First -->          
+        {% if page.services_first %}
+          <div class = {{ services_class }}>
+            {{ page.services_first }}
+          </div>
+        {% endif %}          
+        <!-- End: Bottom First -->
+
+        <!-- Start: Bottom Second -->
+        {% if page.services_second %}
+          <div class = {{ services_class }}>
+            {{ page.services_second }}
+          </div>
+        {% endif %}          
+        <!-- End: Bottom Second -->
+
+        <!-- Start: Bottom third -->          
+        {% if page.services_third %}
+          <div class = {{ services_class }}>
+            {{ page.services_third }}
+          </div>
+        {% endif %}          
+        <!-- End: Bottom Third -->
+
+        <!-- Start: Bottom third -->          
+        {% if page.services_forth %}
+          <div class = {{ services_class }}>
+            {{ page.services_forth }}
+          </div>
+        {% endif %}          
+        <!-- End: Bottom Third -->
+
+      </div>
+    </div>
+  </div>
+
+{% endif %}
+<!--End: Price table widgets -->
+
+
+<!-- Start: Bottom widgets -->
+{% if page.bottom_first or page.bottom_second or page.bottom_third or page.bottom_forth %}
+
+  <div class="bottom-widget" id="bottom-widget">    
+    <div class="container">
+
+      {% if page.bottom_title %}
+        <h2 class="custom-block-title" >
+          {{ page.bottom_title }}
+        </h2>
+      {% endif %}
+
+      <div class="row">
+
+        <!-- Start: Bottom First -->          
+        {% if page.bottom_first %}
+          <div class = {{ bottom_class }}>
+            {{ page.bottom_first }}
+          </div>
+        {% endif %}          
+        <!-- End: Bottom First -->
+
+        <!-- Start: Bottom Second -->
+        {% if page.bottom_second %}
+          <div class = {{ bottom_class }}>
+            {{ page.bottom_second }}
+          </div>
+        {% endif %}          
+        <!-- End: Bottom Second -->
+
+        <!-- Start: Bottom third -->          
+        {% if page.bottom_third %}
+          <div class = {{ bottom_class }}>
+            {{ page.bottom_third }}
+          </div>
+        {% endif %}          
+        <!-- End: Bottom Third -->
+
+        <!-- Start: Bottom Forth -->
+        {% if page.bottom_forth %}
+          <div class = {{ bottom_class }}>
+            {{ page.bottom_forth }}
+          </div>
+        {% endif %}
+        <!-- End: Bottom Forth -->
+
+      </div>
+    </div>
+  </div>
+
+{% endif %}
+<!--End: Bottom widgets -->
+
+
+<!-- Start: Updates widgets -->
+{% if page.updates_first or page.updates_second or page.updates_third or page.updates_forth %}
+
+  <div class="updates" id="updates">    
+    <div class="container">
+
+      {% if page.updates_title %}
+        <h2 class="custom-block-title" >
+          {{ page.updates_title }}
+        </h2>
+      {% endif %}
+
+
+      <div class="row updates-list">
+
+        <!-- Start: Bottom First -->          
+        {% if page.updates_first %}
+          <div class = {{ updates_class }}>
+            {{ page.updates_first }}
+          </div>
+        {% endif %}          
+        <!-- End: Bottom First -->
+
+        <!-- Start: Bottom Second -->
+        {% if page.updates_second %}
+          <div class = {{ updates_class }}>
+            {{ page.updates_second }}
+          </div>
+        {% endif %}          
+        <!-- End: Bottom Second -->
+
+        <!-- Start: Bottom third -->          
+        {% if page.updates_third %}
+          <div class = {{ updates_class }}>
+            {{ page.updates_third }}
+          </div>
+        {% endif %}          
+        <!-- End: Bottom Third -->
+
+        <!-- Start: Bottom Forth -->
+        {% if page.updates_forth %}
+          <div class = {{ updates_class }}>
+            {{ page.updates_forth }}
+          </div>
+        {% endif %}
+        <!-- End: Bottom Forth -->
+
+      </div>
+    </div>
+  </div>
+
+{% endif %}
+<!--End: Team widgets -->
+
+
+<!-- Start: Footer widgets -->
+{% if page.footer_first or page.footer_second or page.footer_third %}
+
+  <div class="footer" id="footer">
+    <div class="container">
+
+      {% if page.footer_title %}
+        <h2 class="custom-block-title" >
+          {{ page.footer_title }}
+        </h2>
+      {% endif %}
+
+      <div class="row">
+
+        <!-- Start: Footer First -->
+        {% if page.footer_first %}
+          <div class = {{ footer_class }}>
+            {{ page.footer_first }}
+          </div>
+        {% endif %}
+        <!-- End: Footer First -->
+
+        <!-- Start :Footer Second -->
+        {% if page.footer_second %}
+          <div class = {{ footer_class }}>
+            {{ page.footer_second }}
+          </div>
+        {% endif %}
+        <!-- End: Footer Second -->
+
+        <!-- Start: Footer third -->
+        {% if page.footer_third %}
+          <div class = {{ footer_class }}>
+            {{ page.footer_third }}
+          </div>
+        {% endif %}
+        <!-- End: Footer Third -->
+
+      </div>
+    </div>
+  </div>
+
+{% endif %}
+<!--End: Footer widgets -->
+
+<!-- Start: Copyright -->
+<div class="copyright">
+
+    <div class="container">
+
+      <span>Copyright © {{ "now"|date("Y") }}. All rights reserved.</span>
+
+      {% if show_credit_link %}
+        <span class="credit-link">Designed By <a href="http://www.psyrenultimate.com" target="_blank">psyrenultimate</a></span>
+      {% endif %}
+
+      <p class="social-media">
+        {% if facebook_url %}
+          <a href="{{ facebook_url }}"  class="facebook" target="_blank" ><i class="fab fa-facebook-f"></i></a>
+        {% endif %}
+        {% if google_plus_url %}
+          <a href="{{ google_plus_url }}"  class="google-plus" target="_blank" ><i class="fab fa-google-plus-g"></i></a>
+        {% endif %}
+        {% if twitter_url %}
+          <a href="{{ twitter_url }}" class="twitter" target="_blank" ><i class="fab fa-twitter"></i></a>
+        {% endif %}
+        {% if linkedin_url %}
+          <a href="{{ linkedin_url }}" class="linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        {% endif %}
+        {% if pinterest_url %}
+          <a href="{{ pinterest_url }}" class="pinterest" target="_blank" ><i class="fab fa-pinterest-p"></i></a>
+        {% endif %}
+        {% if rss_url %}
+          <a href="{{ rss_url }}" class="rss" target="_blank" ><i class="fa fa-rss"></i></a>
+        {% endif %}
+      </p>
+
+  </div>
+</div>
+<!-- End: Copyright -->
+
+
+
+
+

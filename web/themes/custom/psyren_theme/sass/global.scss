@@ -1,0 +1,21 @@
+/** 
+	* Filename:     global.css
+	* Version:      1.0.0 (Tue 26 Mar 2019)
+	* Website:      https://www.psyrenultimate.com
+	* Description:  Global Styles
+	* Author:		support Team
+					support@psyrenultimate.com
+**/
+
+@import "compass/reset";
+@import "compass/CSS3";
+@import "variables-and-mixins";
+@import "base";
+@import "typhography";
+@import "global-styles";
+@import "home.scss";
+@import "header";
+@import "slider";
+@import "menu";
+@import "demo";
+@import "pages";

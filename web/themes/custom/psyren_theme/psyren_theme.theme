@@ -1,0 +1,335 @@
+<?php
+
+/**
+ * @file
+ * Contains theme override functions and preprocess functions
+ */
+
+use Drupal\Core\Template\RenderWrapper;
+use Drupal\Core\Template\Attribute;
+use Drupal\search\Form\SearchBlockForm;
+use Drupal\Component\Utility\SafeMarkup;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\system\Form\ThemeSettingsForm;
+use Drupal\file\Entity\File;
+use Drupal\Core\Url;
+use Drupal\file\Plugin\Core\Entity\FileInterface;
+
+/**
+ * Implements hook_preprocess_page() for block templates.
+ */
+
+function psyren_theme_preprocess_page(&$variables) {
+
+
+  // Add responsive class for top widget.
+  if (!empty($variables['page']['topwidget_first']) && !empty($variables['page']['topwidget_second']) && !empty($variables['page']['topwidget_third'])) {
+    $variables['topwidget_class'] = 'col-md-4';
+  }
+  elseif((!empty($variables['page']['topwidget_first']) && !empty($variables['page']['topwidget_second'])) or (!empty($variables['page']['topwidget_first']) && !empty($variables['page']['topwidget_third'])) or (!empty($variables['page']['topwidget_third']) && !empty($variables['page']['topwidget_second']))) {
+    $variables['topwidget_class'] = 'col-md-6';
+  }
+  else {
+    $variables['topwidget_class'] = 'col-md-12';
+  }
+
+
+  // Add responsive class for bottom widget.
+  if (!empty($variables['page']['bottom_first']) && !empty($variables['page']['bottom_second']) && !empty($variables['page']['bottom_third']) && !empty($variables['page']['bottom_forth'])) {
+    $variables['bottom_class'] = 'col-md-3';
+  }
+  else if (!empty($variables['page']['bottom_first']) && !empty($variables['page']['bottom_second']) && !empty($variables['page']['bottom_third'])) {
+    $variables['bottom_class'] = 'col-md-4';
+  }
+  else if((!empty($variables['page']['bottom_first']) && !empty($variables['page']['bottom_second'])) or (!empty($variables['page']['bottom_first']) && !empty($variables['page']['bottom_third'])) or (!empty($variables['page']['bottom_third']) && !empty($variables['page']['bottom_second']))) {
+    $variables['bottom_class'] = 'col-md-6';
+  }
+  else {
+    $variables['bottom_class'] = 'col-md-12';
+  }
+
+
+  // Add responsive class for services widget.
+  if (!empty($variables['page']['services_first']) && !empty($variables['page']['services_second']) && !empty($variables['page']['services_third']) && !empty($variables['page']['services_forth'])) {
+    $variables['services_class'] = 'col-md-3';
+  }
+  else if (!empty($variables['page']['services_first']) && !empty($variables['page']['services_second']) && !empty($variables['page']['services_third'])) {
+    $variables['services_class'] = 'col-md-4';
+  }
+  else if((!empty($variables['page']['services_first']) && !empty($variables['page']['services_second'])) or (!empty($variables['page']['services_first']) && !empty($variables['page']['services_third'])) or (!empty($variables['page']['services_third']) && !empty($variables['page']['services_second']))) {
+    $variables['services_class'] = 'col-md-6';
+  }
+  else {
+    $variables['services_class'] = 'col-md-12';
+  }
+
+
+  // Add responsive class for updates widget.
+  if (!empty($variables['page']['updates_first']) && !empty($variables['page']['updates_second']) && !empty($variables['page']['updates_third']) && !empty($variables['page']['updates_forth'])) {
+    $variables['updates_class'] = 'col-md-3';
+  }
+  else if (!empty($variables['page']['updates_first']) && !empty($variables['page']['updates_second']) && !empty($variables['page']['updates_third'])) {
+    $variables['updates_class'] = 'col-md-4';
+  }
+  else if((!empty($variables['page']['updates_first']) && !empty($variables['page']['updates_second'])) or (!empty($variables['page']['updates_first']) && !empty($variables['page']['updates_third'])) or (!empty($variables['page']['updates_third']) && !empty($variables['page']['updates_second']))) {
+    $variables['updates_class'] = 'col-md-6';
+  }
+  else {
+    $variables['updates_class'] = 'col-md-12';
+  }
+
+
+  // Add responsive class for features.
+  if (!empty($variables['page']['features_first']) && !empty($variables['page']['features_second']) && !empty($variables['page']['features_third'])) {
+    $variables['features_class'] = 'col-md-4';
+    $variables['features_first_class'] = 'col-md-4';
+  }
+  elseif((!empty($variables['page']['features_first']) && !empty($variables['page']['features_second'])) or (!empty($variables['page']['features_first']) && !empty($variables['page']['features_third'])) or (!empty($variables['page']['features_third']) && !empty($variables['page']['features_second']))) {
+    $variables['features_class'] = 'col-md-6';
+    $variables['features_first_class'] = 'col-md-6';
+  }
+  else {
+    $variables['features_class'] = 'col-md-12';
+  }
+
+
+  // Add responsive class for footer.
+  if (!empty($variables['page']['footer_first']) && !empty($variables['page']['footer_second']) && !empty($variables['page']['footer_third'])) {
+    $variables['footer_class'] = 'col-md-4';
+  }
+  elseif((!empty($variables['page']['footer_first']) && !empty($variables['page']['footer_second'])) or (!empty($variables['page']['footer_first']) && !empty($variables['page']['footer_third'])) or (!empty($variables['page']['footer_third']) && !empty($variables['page']['footer_second']))) {
+    $variables['footer_class'] = 'col-md-6';
+  }
+  else {
+    $variables['footer_class'] = 'col-md-12';
+  }
+
+
+  // Add information about the number of sidebars.
+  if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
+    $variables['contentlayout'] = 'col-md-6';
+    $variables['sidebarfirst'] = 'col-md-3';
+    $variables['sidebarsecond'] = 'col-md-3';
+  }
+  elseif (!empty($variables['page']['sidebar_first'])) {
+    $variables['contentlayout'] = 'col-md-9 ';
+    $variables['sidebarfirst'] = 'col-md-3';
+  }
+  elseif (!empty($variables['page']['sidebar_second'])) {
+    $variables['contentlayout'] = 'col-md-9';
+    $variables['sidebarsecond'] = 'col-md-3';
+  }
+  else {
+    $variables['contentlayout'] = 'col-md-12';
+  }
+
+
+  // Social media global variable.
+  $variables['show_social_icon'] = theme_get_setting('show_social_icon');
+  $variables['facebook_url'] = theme_get_setting('facebook_url');
+  $variables['google_plus_url'] = theme_get_setting('google_plus_url');
+  $variables['twitter_url'] = theme_get_setting('twitter_url');
+  $variables['linkedin_url'] = theme_get_setting('linkedin_url');
+  $variables['pinterest_url'] = theme_get_setting('pinterest_url');
+  $variables['rss_url'] = theme_get_setting('rss_url');
+  $variables['show_credit_link'] = theme_get_setting('show_credit_link');
+
+
+  //To get the current URL
+  $current_url  = \Drupal::request()->getRequestUri();
+  $current_path = explode("/", $current_url);
+  $variables['current_path'] = $current_path[2];
+  
+  
+  // Slider
+  // Assign Variable for slider
+  if ($variables['is_front']) {
+    if (theme_get_setting('show_slideshow','psyren_theme') == 1) {
+      $variables['show_slideshow'] = 1;
+      $variables['slider_content'] = psyren_theme_get_slider_content();
+    }
+  }
+
+}
+
+/**
+ * Implements hook_preprocess_menu().
+ */
+function psyren_theme_preprocess_menu(&$variables, $hook) {
+  if ($hook == 'menu__main') { // We're doing that for main menu.
+    // Get the current path.
+    $current_path = \Drupal::request()->getRequestUri();
+    $items = $variables['items'];
+    foreach ($items as $key => $item) {
+      // If path is current_path, set active to li.
+      if ($item['url']->toString() == $current_path) {
+      // Add active link.
+      $variables['items'][$key]['attributes']['class'] = 'active';
+      }
+    }
+  }
+}
+
+/**
+ * Slider
+ * Implements custom function for get slider content.
+ */
+function psyren_theme_get_slider_content() {
+  $slider_content = array();
+  for ($i = 1; $i <= theme_get_setting('no_of_slides'); $i++) {
+    $fid = theme_get_setting('slide_image_path'.$i,'psyren_theme');
+    if (!empty($fid)) {
+      $file = file_load($fid[0]);
+      $uri = $file->getFileUri();
+      $path = file_create_url($uri);
+    }
+    else {
+      $path = base_path() . drupal_get_path('theme', 'psyren_theme') . theme_get_setting('slide_image_path_' . $i, 'psyren_theme');
+    }
+    $slider_content[$i] = '<li>
+      <img src="' . $path . '" alt="Slider Banner" />
+      <div class="slider-caption">
+        <h2 class="slider-title">' . theme_get_setting('slide_title_' . $i, 'psyren_theme').'</h2>
+        <div class="clearfix"><p class="slider-description">' . theme_get_setting('slide_description_' . $i, 'psyren_theme').'</p></div>
+        <a href=' . theme_get_setting('slide_url_' . $i, 'psyren_theme') . ' class="more-link">Read more</a>
+      </div>
+    </li>';
+  }
+  return $slider_content;
+}
+
+/**
+ * Implements hook_form_system_theme_settings_alter().
+ */
+function psyren_theme_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+
+  $form['psyren_theme_info'] = array(
+    '#markup' => '<h2><br/>Advanced Theme Settings</h2><div class="messages messages--warning">Clear cache after making any changes in theme settings. <a href="../../config/development/performance">Click here to clear cache</a></div>'
+  );
+
+  //Social Icon Link
+  $form['psyren_theme_settings']['social_icon'] = array(
+    '#type' => 'details',
+    '#title' => t('Social Media Link'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  $form['psyren_theme_settings']['social_icon']['show_social_icon'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Show Social Icons'),
+    '#default_value' => theme_get_setting('show_social_icon'),
+    '#description'   => t("Show/Hide Social media links"),
+  );
+  $form['psyren_theme_settings']['social_icon']['facebook_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Facebook URL'),
+    '#default_value' => theme_get_setting('facebook_url'),
+  );
+  $form['psyren_theme_settings']['social_icon']['google_plus_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Google plus URL'),
+    '#default_value' => theme_get_setting('google_plus_url'),
+  );
+  $form['psyren_theme_settings']['social_icon']['twitter_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Twitter URL'),
+    '#default_value' => theme_get_setting('twitter_url'),
+  );
+  $form['psyren_theme_settings']['social_icon']['linkedin_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('LinkedIn URL'),
+    '#default_value' => theme_get_setting('linkedin_url'),
+  );
+  $form['psyren_theme_settings']['social_icon']['pinterest_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Pinterest URL'),
+    '#default_value' => theme_get_setting('pinterest_url'),
+  );
+  $form['psyren_theme_settings']['social_icon']['rss_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('RSS URL'),
+    '#default_value' => theme_get_setting('rss_url'),
+  );
+
+  //Show/Hide credit
+  $form['psyren_theme_settings']['credit_link'] = array(
+    '#type' => 'details',
+    '#title' => t('Footer Credit Link'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  $form['psyren_theme_settings']['credit_link']['show_credit_link'] = array(
+    '#type' => 'checkbox',
+    '#title' => t("Show/Hide 'Designed by psyrenultimate' credit text"),
+    '#default_value' => theme_get_setting('show_credit_link'),
+    '#description'   => t("Highly recommend to display credit in footer"),
+  );
+  
+  //Slide show configure 
+  $form['psyren_theme_settings']['slideshow'] = array(
+    '#type' => 'details',
+    '#title' => t('Front Page Slideshow'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  $form['psyren_theme_settings']['slideshow']['no_of_slides'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Number of slides'),
+    '#default_value' => theme_get_setting('no_of_slides'),
+    '#description'  => t("Enter the number of slides required & Save configuration"),
+    '#markup' => '<div class="messages messages--warning">Clear caches after making any changes in theme settings. <a href="../../config/development/performance">Click here to clear cache</a></div>',
+  );
+  $form['psyren_theme_settings']['slideshow']['show_slideshow'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Show Slideshow'),
+    '#default_value' => theme_get_setting('show_slideshow'),
+    '#description'   => t("Show/Hide Slideshow in home page"),
+  );
+  $form['psyren_theme_settings']['slideshow']['slide'] = array(
+    '#markup' => t('Change the banner image, title, description and link using below fieldset'),
+  );
+  
+  for ($i = 1; $i <= theme_get_setting('no_of_slides'); $i++) {
+    $form['psyren_theme_settings']['slideshow']['slide' . $i] = array(
+      '#type' => 'details',
+      '#title' => t('Slide '.$i),
+      '#collapsible' => TRUE,
+      '#collapsed' => TRUE,
+    );
+    $form['psyren_theme_settings']['slideshow']['slide' . $i]['slide_image_path' . $i] = array(
+      '#type' => 'managed_file',
+      '#title' => t('Slide '.$i.' Image'),
+      '#default_value' => theme_get_setting('slide_image_path'.$i,'psyren_theme'),
+      '#upload_location' => 'public://',
+    );
+    $form['psyren_theme_settings']['slideshow']['slide' . $i]['slide_title_' . $i] = array(
+      '#type' => 'textfield',
+      '#title' => t('Slide '.$i.' Title'),
+      '#default_value' => theme_get_setting('slide_title_' . $i,'psyren_theme'),
+    );
+    $form['psyren_theme_settings']['slideshow']['slide' . $i]['slide_description_' . $i] = array(
+      '#type' => 'textarea',
+      '#title' => t('Slide '.$i.' Description'),
+      '#default_value' => theme_get_setting('slide_description_' . $i,'psyren_theme'),
+    );    
+    $form['psyren_theme_settings']['slideshow']['slide' . $i]['slide_url_' . $i] = array(
+      '#type' => 'textfield',
+      '#title' => t('Slide '.$i.' URL'),
+      '#default_value' => theme_get_setting('slide_url_' . $i,'psyren_theme'),
+    );
+
+    // Make the uploaded images permanent.
+    $image = theme_get_setting('slide_image_path'.$i,'psyren_theme');
+    if(!empty($image)){
+      $file = File::load($image[0]);
+      $file->status = FILE_STATUS_PERMANENT;
+      $file->save();
+      $file_usage = \Drupal::service('file.usage');
+      $file_usage_check = $file_usage->listUsage($file);
+      if (empty($file_usage_check)) {
+        $file_usage->add($file, 'psyren_theme', 'theme', $image[0]);
+      }
+    }
+
+  }
+}

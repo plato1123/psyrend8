@@ -1,0 +1,86 @@
+name: Psyren Theme originally based on charity zymph Theme
+type: theme
+description: 'Psyren Drupal 8 theme'
+package: core
+# core: 8.x
+
+#libraries
+libraries:
+  - psyren_theme/bootstrap
+  - psyren_theme/flexslider
+  - psyren_theme/fontawesome
+  - psyren_theme/smartmenus
+  - psyren_theme/owl
+  - psyren_theme/global-components
+
+#Regions
+regions:
+
+  #Header
+  header: 'Header'
+  primary_menu: 'Primary menu'
+  search: 'Search'
+
+  #Top widgets
+  topwidget_title: 'Top widget title'
+  topwidget_first: 'Top first widget'
+  topwidget_second: 'Top second widget'
+  topwidget_third: 'Top third widget' 
+
+  #Top message widgets
+  topmessage: 'Top Message'
+
+  #Global region
+  highlighted: 'Highlighted' 
+  page_title: 'Page title'
+  breadcrumb: 'Breadcrumb'
+  content: 'Content'
+  sidebar_first: 'Left sidebar'
+  sidebar_second: 'Right sidebar'
+
+  #Clients widgets
+  clients_title: 'Clients title'
+  clients: 'Clients'
+
+  #Features widgets
+  features_title: 'Features title'
+  features_first: 'Features first widget'
+  features_second: 'Features second widget'
+  features_third: 'Features third widget'
+
+  #Services widgets
+  services_title: 'Services title'
+  services_first: 'Services first widget'
+  services_second: 'Services second widget'
+  services_third: 'Services third widget'
+  services_forth: 'Services forth widget'
+
+  #Bottom widgets
+  bottom_title: 'Bottom title'
+  bottom_first: 'Bottom first widget'
+  bottom_second: 'Bottom second widget'
+  bottom_third: 'Bottom third widget'
+  bottom_forth: 'Bottom forth widget'
+
+  #Updates widgets
+  updates_title: 'Updates title'
+  updates_first: 'Updates first widget'
+  updates_second: 'Updates second widget'
+  updates_third: 'Updates third widget'
+  updates_forth: 'Updates forth widget'
+
+  #Footer widgets
+  footer_title: 'Footer title'
+  footer_first: 'Footer first widget'
+  footer_second: 'Footer second widget'
+  footer_third: 'Footer third widget'
+
+  #Auto hidden
+  auto_hidden_block: 'Auto hidden blocks'
+
+
+# Information added by Drupal.org packaging script on 2019-03-26
+version: '8.x-1.0'
+# core: '8.x'
+# project: 'psyren_theme'
+# datestamp: 1553621584

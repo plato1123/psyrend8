@@ -1,0 +1,73 @@
+# Bootstrap
+bootstrap:
+  version: 1.x
+  css:
+    theme:
+      includes/bootstrap/css/bootstrap.min.css: {}
+      includes/bootstrap/css/docs.min.css: {}
+  js:
+    includes/bootstrap/js/popper.min.js: {}
+    includes/bootstrap/js/bootstrap.min.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+
+# global components
+global-components:
+  Version: 1.x
+  css:
+    theme:
+      css/global.css: {}
+      css/media.css: {}
+  js:
+    js/custom.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+
+# Flexslider
+flexslider:
+  version: 1.x
+  css:
+    theme:
+      includes/flexslider/css/flexslider.css: {}
+  js:
+    includes/flexslider/js/jquery.flexslider-min.js: {}
+  dependencies:
+    - core/jquery
+
+# Font awesome
+fontawesome:
+  version: 1.x
+  css:
+    theme:
+      includes/fontawesome/css/fontawesome-all.css: {}
+
+# Smart menus
+smartmenus:
+  version: 1.x
+  css:
+    theme:
+      includes/smartmenus/sm-core-css.css: {}
+  js:
+    includes/smartmenus/jquery.smartmenus.min.js: {}
+  dependencies:
+    - core/jquery
+
+# OWL
+owl:
+  version: 1.x
+  css:
+    theme:
+      includes/owl/assets/owl.carousel.css: {}
+      includes/owl/assets/owl.theme.default.min.css: {}
+  js:
+    includes/owl/owl.carousel.min.js: {}
+  dependencies:
+    - core/jquery
+

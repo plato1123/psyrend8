@@ -1,0 +1,162 @@
+.team,
+.topwidget,
+.footer,
+.bottom-widget,
+.path-frontpage .main-content,
+.services,
+.products,
+.footer,
+.features,
+.services,
+.updates,
+.copyright,
+.clients{
+	padding: 40px 0;
+}
+
+.main-content{
+	padding: 0 0 50px 0;
+}
+
+.features{
+	background-color: #fff2e0;
+
+	.region{
+		overflow: hidden;
+	}
+}
+
+.footer{
+
+	tbody tr:hover, tbody tr:focus {
+	    background: none;
+	}
+}
+
+.clients{
+	.region{
+		ul {
+			li{
+				display: inline-block;
+				width: 100%;
+				text-align: center;
+
+				img{
+					max-width: 200px;
+				}
+			}
+		}
+	}
+}
+
+.services{
+	text-align: center;
+
+	.services-list{
+
+		.block{
+		    padding: 20px;
+		    background: #232323;
+		    margin-bottom: 30px;
+		}
+	}
+
+	.region-services-first{
+		.block:first-child{
+		    background: #ffc67c;
+		}
+	}
+}
+
+/* Testimonials */
+
+.testimonials-wrap{
+	background: #fafafa;
+	border-top: solid 1px #e3e3e3;
+	border-bottom: solid 1px #e3e3e3;
+	padding: 20px 0;
+	text-align: center;
+	font-size: 1em;
+	line-height: 160%;
+}
+
+.region-testimonials{
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.testimonials-pic{
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	vertical-align: bottom;
+	margin-right: 10px;
+}
+
+.testimonials-pic img{
+	@include border-radius(50%);
+}
+
+.testimonials-author{
+	padding: 0 5px;
+	font-size: .75em;
+	color: #555;
+}
+
+/*Price*/
+
+.price-table{
+	.card-header{
+		border: 0;
+    	padding: 20px 0;
+	}
+
+	ul li {
+	    list-style: none;
+	    border-bottom: 1px solid #eee;
+	    padding-bottom: 10px;
+	    margin-bottom: 10px;
+	}
+}
+
+/*Front Page*/
+
+.path-frontpage .feed-icon{
+ 	display: none;
+}
+
+/*updates*/
+
+.updates{
+	background: #000;
+    text-align: center;
+
+	.updates-list{
+		.region{
+			background: #efefef;
+			overflow: hidden;
+			padding: 10px;
+			border: 1px solid #eaeaea;
+		}
+	}
+	.custom-block-title h2{
+		color: #fff;
+	}
+}
+
+
+/*Bottom Widgets*/
+
+.bottom-widget{
+	background: #fff;
+
+	h2.title, *{
+	  color: #7964ad;
+	}
+
+}
+
+.path-frontpage .bottom-widgets{
+	padding: 20px 0;
+}
+

@@ -1,0 +1,189 @@
+
+/*Menu*/
+
+.navbar-toggle{
+	cursor: pointer;
+	float: right;
+	background: none;
+	border: 0;
+	padding: 17px 0;
+
+	&:focus{
+		outline: none;
+	}
+
+	.fas{
+		font-size: 2em;
+		color: #000;
+		border: 0;
+		box-shadow: none;
+	}
+}
+
+.navbar-toggle-close{
+	position: absolute;
+    right: 0;
+    padding: 18px;
+    font-size: 2em;
+    color: #f00;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.navbar-default {
+
+	.navbar-toggle{
+  		z-index: 999;
+		margin-right: 0;
+		border: 0;
+		border-radius: 0;
+		color: #fff;
+		background: none;
+		padding: 6px 6px;
+
+		.icon-bar {
+			display: block;
+			width: 35px;
+			height: 4px;
+			border-radius: 1px;
+			background-color: #212020;
+		}
+
+		&:focus, &:hover{
+ 			background: none;
+		}
+	}
+}
+
+nav h2{
+	display: none;
+}
+
+.menu-base-theme{
+	background: none;
+
+	ul{
+		background: none;
+	}
+
+	li{
+
+		a{
+			font-family: $titleFontFamily;
+			color: #fff;
+			border-bottom: 1px solid #4c4a4a;
+			line-height: 100%;
+			padding: 24px 20px;
+			font-size: 1.1em;
+
+			&:hover, 
+			&:focus, 
+			&:active, 
+			&.highlighted{
+				background: none;
+				color: $menuTextActiveColor;
+				line-height: 100%;
+				padding: 24px 20px;
+			}
+
+			&.sub-arrow{
+				color: #999;
+				font-size: 22px;
+				padding: 5px;
+				border-radius: 2px;
+				border: 1px solid #DCDCDC;
+				background: #EFEFEF;
+			}
+
+			span.sub-arrow{
+				line-height: 120%;
+				font-size: 2em;
+			}
+		} 
+	}
+}
+
+.region-primary-menu{
+	width: 100%;
+    background: rgba(0, 0, 0, 0.80);
+    margin-bottom: 15px;
+    border-radius: 0px;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    right: 100%;
+    bottom: 0;
+    width: auto;
+    z-index: 99;
+	transition: all .5s;
+
+    &.expand{
+    	left: 0;
+    	right: 10%;
+    }
+}
+
+
+/*Footer Menu*/
+
+.region-footer-menu{	
+
+	ul{
+		margin: 10px 0;
+		padding: 0;
+	}
+	
+	nav li{
+		display: inline-block;
+		a{
+			display: block;
+			padding: 2px 15px 2px 0;
+		}
+	}
+}
+
+/*Top Menu*/
+
+.top-menu{
+	font-size: .75em;
+	background: #313d48;
+	color: #fff;
+
+	.top-blocks{
+		overflow: hidden;
+
+		.region {
+			padding: 10px 10px 10px 0;
+		}
+		.social-media{
+			padding: 9px 0;
+		}
+	}
+
+	p, .block {
+		margin: 0;
+	}
+
+	a{
+		color: #fff;
+	}
+
+}
+
+.region-top-menu{
+
+	ul{
+		margin: 0;
+		padding: 0;
+	}
+	
+	nav li{
+		display: inline-block;
+		
+		a{
+		    padding: 2px 10px; 
+		    text-transform: uppercase;
+		    line-height: 100%;
+		}
+	}
+}

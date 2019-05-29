@@ -1,0 +1,37 @@
+
+/*Demo Typography*/
+
+.bd-example {
+  position: relative;
+  padding: 20px;
+  border: 2px solid #f7f7f9;
+  background: #ececec;
+}
+
+.highlight{
+	padding: 20px;
+	background-color: #ffffff;
+
+	pre{
+		border: 0;
+		background: none;
+	}
+}
+
+.bd-example-type{
+
+	h1, h2, h3, h4, h5, h6 { margin: 0; }
+
+	.table {
+
+		td {
+			padding: 15px 0;
+			border-color: #eee;
+		}
+
+		tr:first-child td {
+			border-top: 0;
+		}
+		
+	}
+}
