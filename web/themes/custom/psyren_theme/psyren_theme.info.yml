@@ -81,6 +81,6 @@ regions:
 
 # Information added by Drupal.org packaging script on 2019-03-26
 version: '8.x-1.0'
-# core: '8.x'
-# project: 'psyren_theme'
-# datestamp: 1553621584
+core: '8.x'
+project: 'psyren_theme'
+datestamp: 1553621584
