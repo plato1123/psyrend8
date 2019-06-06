@@ -21,6 +21,7 @@
         "cweagans/composer-patches": "^1.6.5",
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/admin_toolbar": "^1.27",
+        "drupal/backup_migrate": "^4.0",
         "drupal/charity_zymphonies_theme": "^1.1",
         "drupal/coffee": "^1.0@beta",
         "drupal/console": "^1.0.2",
