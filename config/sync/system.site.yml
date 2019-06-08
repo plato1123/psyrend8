@@ -1,11 +1,11 @@
 uuid: f362cbd0-90ae-4b79-9404-1b3e98b3191d
-name: 'Psyren Ultimate'
+name: Psyren
 mail: plato1123@gmail.com
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /node
+  front: /node/1
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en
