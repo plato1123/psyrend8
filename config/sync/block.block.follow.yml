@@ -1,0 +1,25 @@
+uuid: c738ded9-2f09-493e-94fe-24c32096c870
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b2749e60-36a9-4903-b98c-48dfd71f53be'
+  module:
+    - block_content
+  theme:
+    - psyren_theme
+id: follow
+theme: psyren_theme
+region: services_second
+weight: 0
+provider: null
+plugin: 'block_content:b2749e60-36a9-4903-b98c-48dfd71f53be'
+settings:
+  id: 'block_content:b2749e60-36a9-4903-b98c-48dfd71f53be'
+  label: Follow
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

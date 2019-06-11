@@ -1,0 +1,20 @@
+features:
+  node_user_picture: 1
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+logo:
+  use_default: 0
+  path: ''
+favicon:
+  use_default: 1
+show_social_icon: 0
+facebook_url: ''
+google_plus_url: ''
+twitter_url: ''
+linkedin_url: ''
+pinterest_url: ''
+rss_url: ''
+show_credit_link: 0
+no_of_slides: ''
+show_slideshow: 0

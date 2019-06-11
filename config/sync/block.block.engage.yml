@@ -1,0 +1,25 @@
+uuid: 7a79b5a1-25f6-4272-8a5f-770ae30f9f1a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c63d4004-aeec-422b-a40e-f04363dcff50'
+  module:
+    - block_content
+  theme:
+    - psyren_theme
+id: engage
+theme: psyren_theme
+region: services_third
+weight: 0
+provider: null
+plugin: 'block_content:c63d4004-aeec-422b-a40e-f04363dcff50'
+settings:
+  id: 'block_content:c63d4004-aeec-422b-a40e-f04363dcff50'
+  label: Engage
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,25 @@
+uuid: 1b8edfa5-4a67-41d4-8d63-ba722af960fd
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:bc4648f4-ebe8-464c-9bc2-96cb0def7f34'
+  module:
+    - block_content
+  theme:
+    - psyren_theme
+id: funballs
+theme: psyren_theme
+region: footer_title
+weight: 0
+provider: null
+plugin: 'block_content:bc4648f4-ebe8-464c-9bc2-96cb0def7f34'
+settings:
+  id: 'block_content:bc4648f4-ebe8-464c-9bc2-96cb0def7f34'
+  label: 'Fun balls'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
