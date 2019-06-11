@@ -14,18 +14,13 @@ web/core
 web/modules/contrib
 web/themes/contrib
 web/profiles/contrib
-web/wp-content
-web/themes/xterra_t1/assets/.sass-cache
-web/themes/infogasm/infogasm_theme/.sass-cache
+web/themes/custom/psyren_theme/.sass-cache
 
 # Ignore Drupal's file directory
 web/sites/*/files
 web/sites/*/settings.local.php
 web/sites/*/development.services.yml
 web/sites/default/settings.php
-
-# Ignore local .platform.sh files
-.platform/local
 
 # Ignore production SQL dump
 config/backup/*
@@ -37,5 +32,9 @@ config/backup/*
 build
 
 # Ignore sass cache
-web/themes/infogasm/infogasm_theme/.sass-cache/*
+web/themes/custom/psyren_theme/.sass-cache/*
+
+#ignore CSS folders since we're using SASS
+web/themes/custom/psyren_theme/css
+
 
