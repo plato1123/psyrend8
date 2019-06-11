@@ -5,14 +5,15 @@ $fontFamily: 'Poppins', sans-serif;
 $titleFontFamily: 'Poppins', sans-serif;
 $baseFontSize: 14px;
 $bodyBGColor: #f7f7fa;
-$baseFontColor: #435a6b;
+$baseFontColor: #ffffff;
+$contentBackgroundColor: rgba(#000000, 0.8);
 
 $linkColor: #207e00;
 $linkColorHover: #39dd00;
 
 /*Header*/
 $headerBGColor: #000;
-$headerTextColor: #fff;
+$headerTextColor: $linkColor;
 
 $secColor: #fc466b;
 
@@ -21,7 +22,7 @@ $menuTextColor: $linkColor;
 $menuTextActiveColor: $linkColor;
 
 $mobileMenuBg: #000;
-$desktopMenuTextColor: #fff;
+$desktopMenuTextColor: $linkColor;
 $desktopMenuDropDownBg: $linkColor;
 $borderColor: #e8e8e8;
 

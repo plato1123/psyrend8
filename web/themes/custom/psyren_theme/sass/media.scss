@@ -9,7 +9,7 @@
 @media (min-width: 767px) {
 
   .container {
-    max-width: 1140px;
+    max-width: 1600px; /* Was 1140px */
   }
 
   .navbar-toggle{
@@ -126,7 +126,7 @@
         background: none;
         border: 0;
         font-weight: 400;
-        color: #fff;
+        color: $linkColor;
 
         span.sub-arrow {
           padding: 0;

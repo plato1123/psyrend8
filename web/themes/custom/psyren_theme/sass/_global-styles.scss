@@ -12,6 +12,10 @@ body {
   background: url(../images/95786851.jpeg) fixed center no-repeat;
   text-align: left;
 }
+.semitransparentbg {
+  padding:20px;
+  background: $contentBackgroundColor;
+}
 
 /*Page title*/
 
@@ -41,7 +45,7 @@ body {
 
 .copyright {
   /* background: #000; */
-  background: url(../images/88855589-sm.jpeg) ;
+  background: url(../images/88855589-sm.jpeg);
 
   text-align: center;
 }
