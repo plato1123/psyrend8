@@ -36,6 +36,7 @@ module:
   path: 0
   quickedit: 0
   rdf: 0
+  recreate_block_content: 0
   search: 0
   shortcut: 0
   slick: 0
