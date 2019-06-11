@@ -26,6 +26,7 @@
         "drupal/coffee": "^1.0@beta",
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.7.0",
+        "drupal/slick_extras": "^1.0",
         "drush/drush": "^9.0.0",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
