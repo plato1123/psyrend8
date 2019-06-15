@@ -28,6 +28,7 @@
         "drupal/core": "^8.7.0",
         "drupal/devel": "^2.1",
         "drupal/google_analytics": "^3.0",
+        "drupal/page_manager": "^4.0",
         "drupal/panels": "^4.4",
         "drupal/recaptcha": "^2.4",
         "drupal/recreate_block_content": "^2.0",
