@@ -1,0 +1,19 @@
+uuid: 98c7b864-d436-435a-b992-177e0807b3bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_entire_slide_clickable_go_
+    - paragraphs.paragraphs_type.media_slide_image
+id: paragraph.media_slide_image.field_entire_slide_clickable_go_
+field_name: field_entire_slide_clickable_go_
+entity_type: paragraph
+bundle: media_slide_image
+label: 'Clickable Slide go to URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,38 @@
+uuid: 5c23151a-dc4a-471e-8f7e-6b393132e7cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_slide_image_mobile
+    - paragraphs.paragraphs_type.media_slide_image
+  module:
+    - image
+id: paragraph.media_slide_image.field_media_slide_image_mobile
+field_name: field_media_slide_image_mobile
+entity_type: paragraph
+bundle: media_slide_image
+label: 'Media Slide Image Mobile'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

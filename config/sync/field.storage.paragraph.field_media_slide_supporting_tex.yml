@@ -1,0 +1,19 @@
+uuid: d77063b0-2b1b-4a6f-af55-15cdb1c531d5
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_media_slide_supporting_tex
+field_name: field_media_slide_supporting_tex
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

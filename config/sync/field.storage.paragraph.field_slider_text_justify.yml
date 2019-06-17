@@ -1,0 +1,33 @@
+uuid: c5f744fd-5844-4bd7-818f-7d3cbfc4e5f8
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_slider_text_justify
+field_name: field_slider_text_justify
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: left
+      label: left
+    -
+      value: right
+      label: right
+    -
+      value: center
+      label: center
+    -
+      value: center-justify
+      label: 'center justify'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,25 @@
+uuid: 7e8a5323-0bd9-4175-b832-aba66fc7ce75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slider_media_url
+    - paragraphs.paragraphs_type.media_slide_video
+  module:
+    - video_embed_field
+id: paragraph.media_slide_video.field_slider_media_url
+field_name: field_slider_media_url
+entity_type: paragraph
+bundle: media_slide_video
+label: slider_media_url
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_providers:
+    vimeo: vimeo
+    youtube_playlist: youtube_playlist
+    youtube: youtube
+field_type: video_embed_field

@@ -1,0 +1,21 @@
+uuid: ffc0e6bc-09e6-4a69-9414-e3f4ec0b8f3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_slide_supporting_tex
+    - paragraphs.paragraphs_type.media_slide_image
+  module:
+    - text
+id: paragraph.media_slide_image.field_media_slide_supporting_tex
+field_name: field_media_slide_supporting_tex
+entity_type: paragraph
+bundle: media_slide_image
+label: 'Media Slide Supporting Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

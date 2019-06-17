@@ -8,6 +8,8 @@ module:
   blazy: 0
   block: 0
   block_content: 0
+  bootstrap_paragraphs: 0
+  bp_webform: 0
   breakpoint: 0
   captcha: 0
   ckeditor: 0
@@ -18,11 +20,13 @@ module:
   contact: 0
   contextual: 0
   ctools: 0
+  ctools_block: 0
   datetime: 0
   dblog: 0
   devel: 0
   dynamic_page_cache: 0
   editor: 0
+  entity_reference_revisions: 0
   field: 0
   field_ui: 0
   file: 0
@@ -40,6 +44,7 @@ module:
   page_cache: 0
   page_manager: 0
   page_manager_ui: 0
+  panelizer: 0
   panels: 0
   panels_ipe: 0
   path: 0
@@ -50,6 +55,7 @@ module:
   search: 0
   shortcut: 0
   slick: 0
+  slick_paragraphs: 0
   slick_ui: 0
   system: 0
   taxonomy: 0
@@ -59,12 +65,15 @@ module:
   twig_tweak: 0
   update: 0
   user: 0
+  video_embed_field: 0
   views_ui: 0
+  viewsreference: 0
   webform: 0
   webform_node: 0
   menu_link_content: 1
   webform_bootstrap: 1
   views: 10
+  paragraphs: 11
   standard: 1000
 theme:
   stable: 0

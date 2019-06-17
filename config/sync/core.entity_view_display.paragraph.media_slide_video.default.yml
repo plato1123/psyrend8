@@ -1,0 +1,69 @@
+uuid: d183167c-a53a-4524-8c8d-dc641162f7a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.media_slide_video.field_cta_button
+    - field.field.paragraph.media_slide_video.field_headling_text
+    - field.field.paragraph.media_slide_video.field_media_slide_image_mobile
+    - field.field.paragraph.media_slide_video.field_media_slide_supporting_tex
+    - field.field.paragraph.media_slide_video.field_slider_media_url
+    - paragraphs.paragraphs_type.media_slide_video
+  module:
+    - image
+    - link
+    - text
+    - video_embed_field
+id: paragraph.media_slide_video.default
+targetEntityType: paragraph
+bundle: media_slide_video
+mode: default
+content:
+  field_cta_button:
+    weight: 1
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_headling_text:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_media_slide_image_mobile:
+    weight: 2
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_media_slide_supporting_tex:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_slider_media_url:
+    weight: 4
+    label: above
+    settings:
+      responsive: true
+      width: 854
+      height: 480
+      autoplay: true
+    third_party_settings: {  }
+    type: video_embed_field_video
+    region: content
+hidden: {  }

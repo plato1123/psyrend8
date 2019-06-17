@@ -1,0 +1,9 @@
+uuid: 901707b4-2a08-46f6-ae26-03e35814ea01
+langcode: en
+status: true
+dependencies: {  }
+id: media_slide_image
+label: 'Media Slide Image'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

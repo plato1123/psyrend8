@@ -1,0 +1,8 @@
+uuid: d9082293-26e1-48f9-b693-ddca1a53bf3c
+langcode: en
+status: true
+dependencies: {  }
+id: media_carousel
+label: 'Media Carousel'
+revision: 0
+description: ''

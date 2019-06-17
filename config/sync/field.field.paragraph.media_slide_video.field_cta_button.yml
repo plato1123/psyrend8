@@ -1,0 +1,23 @@
+uuid: 4230d4b1-156b-4a9f-abe4-bf4108aed2c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_button
+    - paragraphs.paragraphs_type.media_slide_video
+  module:
+    - link
+id: paragraph.media_slide_video.field_cta_button
+field_name: field_cta_button
+entity_type: paragraph
+bundle: media_slide_video
+label: 'Media Slide CTA Button'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

@@ -1,0 +1,21 @@
+uuid: af108687-1381-4c78-9f30-ce109f2c7e0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slider_text_justify
+    - paragraphs.paragraphs_type.media_slide_image
+  module:
+    - options
+id: paragraph.media_slide_image.field_slider_text_justify
+field_name: field_slider_text_justify
+entity_type: paragraph
+bundle: media_slide_image
+label: 'slider_text_justify(future implementation)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

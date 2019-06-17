@@ -1,0 +1,23 @@
+uuid: f82adeb0-a047-45da-889b-43fcb8070bd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_button
+    - paragraphs.paragraphs_type.media_slide_image
+  module:
+    - link
+id: paragraph.media_slide_image.field_cta_button
+field_name: field_cta_button
+entity_type: paragraph
+bundle: media_slide_image
+label: 'Media Slide CTA Button'
+description: 'CTA (Call to action) button for a media slide.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

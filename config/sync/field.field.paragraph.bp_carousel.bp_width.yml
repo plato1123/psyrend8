@@ -1,0 +1,23 @@
+uuid: 6a81b413-e3d6-48a4-802d-f7f152b39602
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.bp_width
+    - paragraphs.paragraphs_type.bp_carousel
+  module:
+    - options
+_core:
+  default_config_hash: Me0cLKgzYzgY00rZ0gKKGPsWa6bE8mG2hc2uXoXQheU
+id: paragraph.bp_carousel.bp_width
+field_name: bp_width
+entity_type: paragraph
+bundle: bp_carousel
+label: Width
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

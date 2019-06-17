@@ -1,0 +1,19 @@
+uuid: bcb97132-900c-4a68-a928-507b896c23fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_headling_text
+    - paragraphs.paragraphs_type.media_slide_video
+id: paragraph.media_slide_video.field_headling_text
+field_name: field_headling_text
+entity_type: paragraph
+bundle: media_slide_video
+label: 'Headling Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,76 @@
+uuid: 38043954-59ff-4de9-9c9d-480cd6b3d503
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.media_carousel
+    - field.storage.block_content.field_paragraph_reference
+    - paragraphs.paragraphs_type.bp_carousel
+  module:
+    - entity_reference_revisions
+id: block_content.media_carousel.field_paragraph_reference
+field_name: field_paragraph_reference
+entity_type: block_content
+bundle: media_carousel
+label: 'Paragraph Reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      bp_carousel: bp_carousel
+    target_bundles_drag_drop:
+      bp_accordion:
+        weight: 17
+        enabled: false
+      bp_accordion_section:
+        weight: 18
+        enabled: false
+      bp_blank:
+        weight: 19
+        enabled: false
+      bp_block:
+        weight: 20
+        enabled: false
+      bp_carousel:
+        enabled: true
+        weight: 21
+      bp_column_wrapper:
+        weight: 22
+        enabled: false
+      bp_columns:
+        weight: 23
+        enabled: false
+      bp_columns_three_uneven:
+        weight: 24
+        enabled: false
+      bp_columns_two_uneven:
+        weight: 25
+        enabled: false
+      bp_image:
+        weight: 26
+        enabled: false
+      bp_modal:
+        weight: 27
+        enabled: false
+      bp_simple:
+        weight: 28
+        enabled: false
+      bp_tab_section:
+        weight: 29
+        enabled: false
+      bp_tabs:
+        weight: 30
+        enabled: false
+      bp_view:
+        weight: 31
+        enabled: false
+      bp_webform:
+        weight: 32
+        enabled: false
+field_type: entity_reference_revisions
