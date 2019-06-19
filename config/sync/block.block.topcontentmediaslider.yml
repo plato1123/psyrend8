@@ -1,0 +1,25 @@
+uuid: 447abecc-3155-4f5e-af99-2485bb9baf6a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:media_carousel:67ed8c2c-8423-4702-ab14-f447c97dff97'
+  module:
+    - block_content
+  theme:
+    - psyren_theme
+id: topcontentmediaslider
+theme: psyren_theme
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:67ed8c2c-8423-4702-ab14-f447c97dff97'
+settings:
+  id: 'block_content:67ed8c2c-8423-4702-ab14-f447c97dff97'
+  label: 'Top content media slider'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

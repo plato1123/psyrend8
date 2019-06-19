@@ -1,14 +1,13 @@
-
 /*Variables*/
 
-$fontFamily: 'Poppins', sans-serif;
-$titleFontFamily: 'Computerfont', sans-serif;
+$fontFamily: sans-serif;
+$titleFontFamily: "Computerfont", sans-serif;
 $baseFontSize: 14px;
 $bodyBGColor: #f7f7fa;
 $baseFontColor: #ffffff;
 $contentBackgroundColor: rgba(#000000, 0.8);
 
-$linkColor: #5AFC00;
+$linkColor: #5afc00;
 $linkColorHover: #39dd00;
 
 /*Header*/
@@ -26,22 +25,71 @@ $desktopMenuTextColor: $linkColor;
 $desktopMenuDropDownBg: $linkColor;
 $borderColor: #e8e8e8;
 
+$screen-xxs: 320px;
+
+$screen-xs: 480px;
+$screen-xs-min: $screen-xs;
+$screen-phone: $screen-xs-min;
+$screen-is: 380px; // target iphone and smaller screens
+
+// Added this for compatibility with Magento theme
+$screen-sm1: 640px;
+$screen-sm1-min: $screen-sm1;
+$screen-sm1: $screen-sm1-min;
+
+// Small screen / tablet
+// Note: Deprecated $screen-sm and $screen-tablet as of v3.0.1
+$screen-sm: 768px;
+$screen-sm-min: $screen-sm;
+$screen-tablet: $screen-sm-min;
+
+// Medium screen / desktop
+// Note: Deprecated $screen-md and $screen-desktop as of v3.0.1
+$screen-md: 992px;
+$screen-md-min: $screen-md;
+$screen-desktop: $screen-md-min;
+
+// Large screen / wide desktop
+// Note: Deprecated $screen-lg and $screen-lg-desktop as of v3.0.1
+$screen-lg: 1200px;
+$screen-lg-min: $screen-lg;
+$screen-lg-desktop: $screen-lg-min;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);
+
+$zindex-layout-wrapper: 100; // changed from 10000 to 100.  Wthecks were you trying to do Splashlab????
+// bootstrap ones
+$zindex-navbar: 10000;
+$zindex-dropdown: 10000;
+$zindex-popover: 10010;
+$zindex-tooltip: 10030;
+$zindex-navbar-fixed: 10030;
+$zindex-modal-background: 10040;
+$zindex-modal: 10050;
+$zindex-loader-overlay: 10060;
+// drupal
+$zindex-admin-toolar: 100000; // is this a typo or intentional??  Will add with proper spelling as well below.
+$zindex-admin-toolbar: 100000; // adding this as well just in case
+
 /*Mixins*/
 
-@mixin globalButton(){
-	background: $linkColor;
-	cursor: pointer;
-	color: #fff;
-	border: 0;
-	padding: 14px 30px;
-	line-height: 100%;
-	margin-right: 2px;
-	display: inline-block;
-	@include border-radius(0px);
-	@include transition(all 0.3s);
+@mixin globalButton() {
+  background: $linkColor;
+  cursor: pointer;
+  color: #fff;
+  border: 0;
+  padding: 14px 30px;
+  line-height: 100%;
+  margin-right: 2px;
+  display: inline-block;
+  @include border-radius(0px);
+  @include transition(all 0.3s);
 }
 
-@mixin globalButtonHover(){
-    background: $linkColorHover;
-    color: #fff;
+@mixin globalButtonHover() {
+  background: $linkColorHover;
+  color: #fff;
 }

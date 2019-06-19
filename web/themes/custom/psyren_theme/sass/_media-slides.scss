@@ -1,0 +1,106 @@
+.text-justify-left {text-align:left;}
+.text-justify-right {text-align:right;}
+.text-justify-center-justify {text-align:justify;}
+.text-justify-center {text-align:center;}
+
+
+
+.carousel {
+    .carousel-control {
+        display: none;
+    }
+    .carousel-indicators {
+        li, li.active {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+.media-carousel-container {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 107%; //Image height divided by image width: 800px / 750px ~= 1.07
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: $gray-darker; */
+
+    .media-carousel-bar {
+        .media-carousel-bar-row {
+            position: absolute;
+            width: 100%;
+            bottom: 60px;
+            padding: 0px 30px;
+        }
+
+        h2 {
+            font-size: 26px;
+            /* font-weight: $font-weight-regular; */
+            /* color: $white; */
+            text-transform: uppercase;
+        }
+        p {
+            margin: 0px 0px 15px;
+            font-size: 14px;
+            font-weight: 400;
+            /* color: $white; */
+        }
+        img {
+            display: none;
+        }
+    }
+    .media-carousel-video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        /* background-color: $gray-darker; */
+
+        > div {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+@media only screen and (min-width: $screen-sm-min) {
+    .media-carousel-container {
+        padding-bottom: 40%; // Image height divided by image width: 725px / 1800px ~= .4
+    }
+}
+@media only screen and (min-width: $screen-md-min) {
+    .media-carousel-container .col-md-9 {width: 85%;}
+
+    .carousel {
+        .carousel-control {
+            display: flex;
+            justify-content: center;
+            width: 100px;
+            background-image: none;
+        }
+        .carousel-control.left {
+            img {
+                transform: rotate(180deg);
+            }
+        }
+        .carousel-indicators {
+            display: none;
+        }
+    }
+    .media-carousel-container {
+
+        .media-carousel-bar {
+
+            h2 {
+                font-size: 40px;
+                /* font-weight: $font-weight-light; */
+            }
+            p {
+                font-size: 22px;
+            }
+            img {
+                display: block;
+            }
+        }
+    }
+}

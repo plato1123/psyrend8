@@ -39,6 +39,7 @@
         "drupal/slick_extras": "^1.0",
         "drupal/slick_paragraphs": "^2.0",
         "drupal/smtp": "^1.0",
+        "drupal/token": "^1.5",
         "drupal/twig_tweak": "^2.3",
         "drupal/video_embed_field": "^2.1",
         "drupal/webform": "^5.2",

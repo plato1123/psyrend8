@@ -21,7 +21,7 @@ mode: default
 content:
   field_cta_button:
     weight: 1
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -33,7 +33,7 @@ content:
     region: content
   field_headling_text:
     weight: 0
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -41,7 +41,7 @@ content:
     region: content
   field_media_slide_image_mobile:
     weight: 2
-    label: above
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
@@ -50,14 +50,14 @@ content:
     region: content
   field_media_slide_supporting_tex:
     weight: 3
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_slider_media_url:
     weight: 4
-    label: above
+    label: hidden
     settings:
       responsive: true
       width: 854
