@@ -5,7 +5,7 @@ features:
   favicon: 1
 logo:
   use_default: 0
-  path: ''
+  path: 'public://psyrendomain2.png'
 favicon:
   use_default: 1
 show_social_icon: 0
@@ -16,5 +16,17 @@ linkedin_url: ''
 pinterest_url: ''
 rss_url: ''
 show_credit_link: 0
-no_of_slides: ''
+no_of_slides: '3'
 show_slideshow: 0
+slide_image_path1: {  }
+slide_title_1: ''
+slide_description_1: ''
+slide_url_1: ''
+slide_image_path2: {  }
+slide_title_2: ''
+slide_description_2: ''
+slide_url_2: ''
+slide_image_path3: {  }
+slide_title_3: ''
+slide_description_3: ''
+slide_url_3: ''
