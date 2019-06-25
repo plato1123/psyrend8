@@ -6,6 +6,7 @@ dependencies:
     - 'block_content:media_carousel:67ed8c2c-8423-4702-ab14-f447c97dff97'
   module:
     - block_content
+    - system
   theme:
     - psyren_theme
 id: topcontentmediaslider
@@ -22,4 +23,9 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

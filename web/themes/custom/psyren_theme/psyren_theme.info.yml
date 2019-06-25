@@ -1,6 +1,6 @@
-name: Psyren Theme originally based on charity zymph Theme
+name: Psyren Theme 
 type: theme
-description: 'Psyren Drupal 8 theme'
+description: 'Psyren Drupal 8 theme (originally based on charity zymph Theme)'
 package: core
 # core: 8.x
 

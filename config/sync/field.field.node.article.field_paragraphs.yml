@@ -1,0 +1,100 @@
+uuid: 10510e10-1abb-4644-a8ce-b63cb821f053
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs
+    - node.type.article
+    - paragraphs.paragraphs_type.bp_accordion
+    - paragraphs.paragraphs_type.bp_accordion_section
+    - paragraphs.paragraphs_type.bp_carousel
+    - paragraphs.paragraphs_type.bp_column_wrapper
+    - paragraphs.paragraphs_type.bp_columns
+    - paragraphs.paragraphs_type.bp_columns_three_uneven
+    - paragraphs.paragraphs_type.bp_columns_two_uneven
+    - paragraphs.paragraphs_type.bp_modal
+    - paragraphs.paragraphs_type.bp_simple
+    - paragraphs.paragraphs_type.bp_webform
+  module:
+    - entity_reference_revisions
+id: node.article.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
+bundle: article
+label: Paragraphs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      bp_accordion: bp_accordion
+      bp_accordion_section: bp_accordion_section
+      bp_carousel: bp_carousel
+      bp_column_wrapper: bp_column_wrapper
+      bp_columns: bp_columns
+      bp_columns_three_uneven: bp_columns_three_uneven
+      bp_columns_two_uneven: bp_columns_two_uneven
+      bp_modal: bp_modal
+      bp_simple: bp_simple
+      bp_webform: bp_webform
+    target_bundles_drag_drop:
+      bp_accordion:
+        enabled: true
+        weight: 19
+      bp_accordion_section:
+        enabled: true
+        weight: 20
+      bp_blank:
+        weight: 21
+        enabled: false
+      bp_block:
+        weight: 22
+        enabled: false
+      bp_carousel:
+        enabled: true
+        weight: 23
+      bp_column_wrapper:
+        enabled: true
+        weight: 24
+      bp_columns:
+        enabled: true
+        weight: 25
+      bp_columns_three_uneven:
+        enabled: true
+        weight: 26
+      bp_columns_two_uneven:
+        enabled: true
+        weight: 27
+      bp_image:
+        weight: 28
+        enabled: false
+      bp_modal:
+        enabled: true
+        weight: 29
+      bp_simple:
+        enabled: true
+        weight: 30
+      bp_tab_section:
+        weight: 31
+        enabled: false
+      bp_tabs:
+        weight: 32
+        enabled: false
+      bp_view:
+        weight: 33
+        enabled: false
+      bp_webform:
+        enabled: true
+        weight: 34
+      media_slide_image:
+        weight: 35
+        enabled: false
+      media_slide_video:
+        weight: 36
+        enabled: false
+field_type: entity_reference_revisions

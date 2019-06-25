@@ -1,0 +1,12 @@
+uuid: a87de2a1-ff95-4726-94db-b795eb4c45ec
+langcode: en
+status: true
+dependencies: {  }
+id: panelhomepage
+label: Panelhomepage
+description: ''
+use_admin_theme: false
+path: /panelhomepage
+access_logic: and
+access_conditions: {  }
+parameters: {  }
