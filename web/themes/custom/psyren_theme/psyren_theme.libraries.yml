@@ -23,6 +23,8 @@ global-components:
       css/media.css: {}
   js:
     js/custom.js: {}
+    js/TweenLite.min.js: {}
+    js/CSSPlugin.min.js: {}
   dependencies:
     - core/jquery
     - core/drupal.ajax

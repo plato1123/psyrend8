@@ -57,6 +57,7 @@ module:
   recaptcha: 0
   recreate_block_content: 0
   search: 0
+  share_everywhere: 0
   shortcut: 0
   slick: 0
   slick_paragraphs: 0

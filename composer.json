@@ -37,6 +37,7 @@
         "drupal/panels": "^4.4",
         "drupal/recaptcha": "^2.4",
         "drupal/recreate_block_content": "^2.0",
+        "drupal/share_everywhere": "1.x-dev",
         "drupal/slick": "^2.0",
         "drupal/slick_extras": "^1.0",
         "drupal/slick_paragraphs": "^2.0",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a6b739c2fda0734b74a7bb0ec54dd237",
+    "content-hash": "ed3716d8d116aa9ddb4367da6982b45b",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4034,6 +4034,54 @@
                 "source": "http://cgit.drupalcode.org/recreate_block_content",
                 "issues": "https://www.drupal.org/project/issues/recreate_block_content"
             }
+        },
+        {
+            "name": "drupal/share_everywhere",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/share_everywhere.git",
+                "reference": "06bf41d51c321e85173d3f0407f1c54cdf3fce9d"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.1+1-dev",
+                    "datestamp": "1555677185",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Malatenszki David",
+                    "homepage": "https://www.drupal.org/user/3509607",
+                    "email": "malatenszki.david@gmail.com"
+                },
+                {
+                    "name": "Rozsa Arpad",
+                    "homepage": "https://www.drupal.org/user/3452551",
+                    "email": "rozsaarpad44@gmail.com"
+                }
+            ],
+            "description": "Drupal 8 share module",
+            "homepage": "https://www.drupal.org/project/share_everywhere",
+            "support": {
+                "source": "https://git.drupalcode.org/project/share_everywhere"
+            },
+            "time": "2019-05-03T12:39:04+00:00"
         },
         {
             "name": "drupal/slick",
@@ -10499,7 +10547,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/blazy": 5,
-        "drupal/coffee": 10
+        "drupal/coffee": 10,
+        "drupal/share_everywhere": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
