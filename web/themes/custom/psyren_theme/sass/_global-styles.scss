@@ -261,3 +261,10 @@ abbr.ajax-changed {
   height: 7px;
   width: 7px;
 }
+
+.share-everywhere { 
+  .se-block {
+    position:relative;
+    top:25px; /* nudge social network buttons down */
+  }
+}
