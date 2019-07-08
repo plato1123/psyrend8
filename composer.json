@@ -31,6 +31,7 @@
         "drupal/devel": "^2.1",
         "drupal/google_analytics": "^3.0",
         "drupal/inline_entity_form": "^1.0",
+        "drupal/metatag": "^1.8",
         "drupal/page_manager": "^4.0",
         "drupal/panelizer": "^4.1",
         "drupal/panels": "^4.4",

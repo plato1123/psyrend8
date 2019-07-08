@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_meta_tags
     - field.field.node.page.field_paragraph_content
     - node.type.page
   module:
+    - metatag
     - paragraphs
     - path
 _core:
@@ -22,6 +24,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_meta_tags:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
   field_paragraph_content:
     type: entity_reference_paragraphs
     weight: 7
