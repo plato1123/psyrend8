@@ -25,7 +25,6 @@
         "drupal/blazy": "^2.0@RC",
         "drupal/bootstrap_layouts": "^5.1",
         "drupal/bootstrap_paragraphs": "^2.0",
-        "drupal/charity_zymphonies_theme": "^1.1",
         "drupal/coffee": "^1.0@beta",
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.7.0",

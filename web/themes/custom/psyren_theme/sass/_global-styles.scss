@@ -266,5 +266,6 @@ abbr.ajax-changed {
   .se-block {
     position:relative;
     top:25px; /* nudge social network buttons down */
+    z-index:2;
   }
 }
