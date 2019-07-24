@@ -49,7 +49,7 @@
     <div{{ attributes.addClass(classes) }}>
         {% block content %}
             <div  {% if content.field_entire_slide_clickable_go_[0] %} 
-                style="cursor:pointer;" onclick="location.href='{{ paragraph.field_entire_slide_clickable_go_.value }}';" 
+                onclick="location.href='{{ paragraph.field_entire_slide_clickable_go_.value }}';" 
                 {% endif %}        
                 class="media-carousel-container swappable-background" 
                 data-background-default="{{  file_url(content.field_media_slide_image[0]["#item"].entity.uri.value) }}" 
@@ -60,7 +60,7 @@
                 <div class="media-carousel-bar container no-padding">
                     <div class="media-carousel-bar-row">
                         <div class="col-md-10 {% if paragraph.field_slider_text_justify.0.value == "left" %} text-justify-left {% endif %} {% if paragraph.field_slider_text_justify.0.value == "center" %} text-justify-center {% endif %} {% if paragraph.field_slider_text_justify.0.value == "center-justify" %} text-justify-center-justify  {% endif %}{% if paragraph.field_slider_text_justify.0.value == "right" %} text-justify-right {% endif %}">
-                            <h1>{{ content.field_headling_text }}</h1>
+                            <h1>{{ content.field_headling_text }}</h1
                             {{ content.field_media_slide_supporting_tex }}
                             {% for key, item in content.field_cta_button if key|first != '#' %}
                                 <a href="{{ item["#url"] }}" class="btn btn-primary btn-lg">

@@ -23,6 +23,9 @@
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
+    pointer:cursor;
+    position:relative;
+    z-index:3;
     /* background-color: $gray-darker; */
 
     .media-carousel-bar {
