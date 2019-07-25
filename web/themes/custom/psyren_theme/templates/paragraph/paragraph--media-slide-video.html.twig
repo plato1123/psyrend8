@@ -59,7 +59,7 @@
                 <div class="media-carousel-bar container no-padding">
                     <div class="media-carousel-bar-row">
                         <div class="col-md-9 {% if paragraph.field_slider_text_justify.0.value == "left" %} text-justify-left {% endif %} {% if paragraph.field_slider_text_justify.0.value == "center" %} text-justify-center {% endif %} {% if paragraph.field_slider_text_justify.0.value == "center-justify" %} text-justify-center-justify  {% endif %}{% if paragraph.field_slider_text_justify.0.value == "right" %} text-justify-right {% endif %}">
-                            {{ content.field_headline_text }}
+                            <h1>{{ content.field_headling_text }}</h1>
                             {{ content.field_media_slide_supporting_tex }}
                             {% for key, item in content.field_cta_button if key|first != '#' %}
                                 <a href="{{ item["#url"] }}" class="btn btn-primary">

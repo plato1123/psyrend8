@@ -16,7 +16,7 @@ provider: null
 plugin: 'block_content:b2749e60-36a9-4903-b98c-48dfd71f53be'
 settings:
   id: 'block_content:b2749e60-36a9-4903-b98c-48dfd71f53be'
-  label: Follow
+  label: 'Listen to Borealis (2016)'
   provider: block_content
   label_display: visible
   status: true

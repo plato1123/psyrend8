@@ -11,7 +11,7 @@ id: paragraph.media_slide_video.field_slider_media_url
 field_name: field_slider_media_url
 entity_type: paragraph
 bundle: media_slide_video
-label: slider_media_url
+label: 'Media Slide Video URL'
 description: ''
 required: false
 translatable: false

@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_image
+    - field.field.node.article.field_meta_tags
     - field.field.node.article.field_paragraphs
     - field.field.node.article.field_tags
     - image.style.large
@@ -15,6 +16,7 @@ dependencies:
     - comment
     - entity_reference_revisions
     - image
+    - metatag
     - panelizer
     - text
     - user
@@ -33,14 +35,14 @@ mode: default
 content:
   body:
     type: text_default
-    weight: 1
+    weight: 2
     region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
   comment:
     type: comment_default
-    weight: 5
+    weight: 6
     region: content
     label: above
     settings:
@@ -56,9 +58,16 @@ content:
       image_link: ''
     third_party_settings: {  }
     label: hidden
+  field_meta_tags:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
   field_paragraphs:
     type: entity_reference_revisions_entity_view
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       view_mode: default
@@ -67,14 +76,14 @@ content:
     region: content
   field_tags:
     type: entity_reference_label
-    weight: 3
+    weight: 4
     region: content
     label: above
     settings:
       link: true
     third_party_settings: {  }
   links:
-    weight: 4
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }

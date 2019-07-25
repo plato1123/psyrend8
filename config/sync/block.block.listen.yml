@@ -16,7 +16,7 @@ provider: null
 plugin: 'block_content:0b25c9b7-14f5-4a09-b29f-4d85f496412e'
 settings:
   id: 'block_content:0b25c9b7-14f5-4a09-b29f-4d85f496412e'
-  label: Listen
+  label: 'Listen to Gourd of Ashes (2017)'
   provider: block_content
   label_display: visible
   status: true
