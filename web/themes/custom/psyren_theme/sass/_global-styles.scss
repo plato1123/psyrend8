@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Inconsolata:400,700");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
 @font-face {
   font-family: "Computerfont";
@@ -192,6 +193,9 @@ ul.links.inline li {
   min-height: 300px;
   .block {
     padding-bottom: 25px;
+  }
+  #block-psyren-theme-local-tasks {
+    padding-bottom: 0px !important; // Clean up extra vertical space around admin items for logged in admin user
   }
 }
 
